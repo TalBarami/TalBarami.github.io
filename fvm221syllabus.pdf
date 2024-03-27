@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+<meta content="IE=10" http-equiv="X-UA-Compatible">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-8-i">
+<title>אוניברסיטת בן-גוריון בנגב - קובץ הקורסים </title>
+<script>var appLang = "he";var appName = "ann";var curDate= "16.03.2022";</script>
+	<script src="/js/mouseActionOnLogo.js"></script>
+	<script src="/js/jquery-1.11.3.min.js"></script>
+	<script src="/js/acc.common.js"></script>
+	<script src="/js/acc.select.js"></script>
+	<script src="/js/scw_ann3.js"></script>
+	<link href="/css/style.php?lang=he" rel="stylesheet" type="text/css">
+	<link href="/css/SPLstyle.css" rel="stylesheet" type="text/css">
+
+	  <!-- <link href="/css/debug.css.php" rel="stylesheet" type="text/css"> -->
+
+	  <style>
+
+	  .inline_header{
+			color: rgb(49, 101, 156);
+	  }
+
+	  select{
+	    width:300px;
+	  }
+
+	  #on_year, #on_semester, #oc_start_time,#oc_end_time{
+		width:50px;
+	  }
+
+	/*#groupTable {
+		 border: 1px solid #A2C1E2;
+	}*/
+
+	#groupTable th.BlueInputKind
+	{
+		BACKGROUND-COLOR: #f7f3f7;
+		COLOR: #31659c;
+		FONT-FAMILY: Arial;
+		FONT-SIZE: 12px;
+		FONT-WEIGHT: bold;
+		TEXT-ALIGN: center;
+		TEXT-DECORATION: none;
+		padding:2px;
+	}
+	  .myltr{
+		//color:red;
+		direction:ltr;
+		display: inline-block;
+	  }
+
+	  </style>
+	
+</head>
+<body><center>
+				 <d1iv id="body_wrap">
+				 <div id="skiptocontent"><a href="#maincontent">דלג לתוכן</a></div>
+                 
+
+<FORM NAME="logoForm" METHOD="post" ACTION="FW.ShowhelpWin?p_page_name=ANNUALSEARCHCOURSE" target="hidden"></form>
+<TABLE style="width:540px;" role="presentation">
+    <TR>
+      <TD class="vtop">
+        <TABLE style="direction:rtl" role="presentation">
+          <TR>
+            <TD colSpan=7><img src="/images/mnav/top-mnav.jpg" height=22  width=260></TD>
+          </TR>
+          <TR>
+			<TD><IMG src="/images/mnav/mnav-right.gif"></TD>
+
+			<TD><A href="mailto:"
+            onmouseout="document.mnav5.src = '/images/mnav/mnav-email.gif'"
+            onmouseover="document.mnav5.src = item5.src;window.status='';return true"><IMG
+            alt="שלח אימייל"  id="mnav5" name="mnav5"
+            src="/images/mnav/mnav-email.gif"></A></TD>
+
+
+			<TD><IMG src="/images/mnav/mnav-right-space.gif"></TD>
+
+			 <TD><A href="https://in.bgu.ac.il/Pages/4students.aspx?" target="newwin_bguKioskURL"
+            onmouseout="document.mnav3.src = '/images/mnav/mnav-info.gif'"
+            onmouseover="document.mnav3.src = item3.src;window.status='';return true"><IMG
+            alt="קיוסק מידע"   id="mnav3" name="mnav3"
+            src="/images/mnav/mnav-info.gif"  ></A></TD>
+
+			<TD><IMG src="/images/mnav/mnav-left-space.gif"></TD>
+
+			<TD><A href="https://in.bgu.ac.il/Pages/default.aspx" target="newwin_bguURL"
+            onmouseout="document.mnav2.src = '/images/mnav/mnav-uni.gif'"
+            onmouseover="document.mnav2.src = item2.src;window.status='';return true"><IMG
+            alt="דף הבית"  id="mnav2" name="mnav2"
+            src="/images/mnav/mnav-uni.gif"></A></TD>
+
+			<TD><IMG src="/images/mnav/mnav-left.gif"></TD>
+
+          </TR>
+          <TR>
+            <TD colSpan=7><img src="/images/mnav/bot-mnav.jpg" height=28 width=260></TD>
+          </TR>
+        </TABLE>
+      </TD>
+      <TD >
+ <IMG  alt="Ben Gurion University of the Negev"  src="/images/mnav/logo.gif" width=480 height=100>
+ </TD>
+    </TR>
+    </TABLE>
+<div class="h40" id="container">
+<div id="navi">
+
+  <div style="float:left;padding-top:10px;clear:both;">
+	<label for="languagesSelect"   class="offscreen">בבחירת שפה מבוקשת הדף יתרענן באופן מידי</label>
+	<select onchange="set_lang(this);" style="width:100px" id="languagesSelect" class="FormField" title="Select Language" >
+	<option selected="selected" value="he">Languages</option>
+	<option value="en">English</option>
+	</select>
+</div>
+
+  
+</div>
+<div id="infoi"><h1>קובץ הקורסים</h1></div>
+</div>
+<a id="maincontent"></a>
+<!-- Start Main Table -->
+<table id="mainTable" role="presentation" style="width: 740px">
+ <tr>
+  <td class="vtop">
+  <table border=0 role="presentation"  style="margin:auto; width:100%">
+   <tr>
+    <td style="background-image: url(/images/frame-corner-top-l.gif);"></td>
+	<td style="background-image: url(/images/frame-top.gif);" class="vtop" >
+
+	<table role="presentation">
+	 <tr>
+	  <td><img src="/images/nothing.gif" width=584 height=1></td>
+	 </tr></table>
+	</td>
+	<td><img src="/images/frame-corner-top-r1.gif" ></td>
+   </tr>
+   <tr>
+    <td style="background-image: url(/images/frame-l.gif);">&nbsp;</td>
+	<td class="vtop" align="center">
+  
+
+		<div class="mainForm " >
+	
+<FORM NAME="mainForm" ID="mainForm"  METHOD="post" ACTION="!app.ann" TARGET="main">
+<input type="hidden" name="rc_rowid" id="rc_rowid">
+</center>
+</body>  
+</html>
+<SCRIPT LANGUAGE="JavaScript">
+ {
+    //newWindow = window.open("fw.ShowDbErr?p_err=ORA-01403: no data found","ContextHelp","menubar=no,scrollbars=no,resizable=no,titlebar=no,toolbar=no,directories=no,location=no,width=375,height=200");
+	// --------------   Zeev   09.01.2006
+  	 alert ("ORA-01403: no data found");
+     //  ------------------------------------
+ }
+</script>
