@@ -27,7 +27,7 @@ const { items } = Astro.props;
       <p class="text-sm mb-0.5" style="color: var(--color-text-muted);">{item.institution}</p>
       {item.advisors.length > 0 && (
         <p class="text-sm mb-1" style="color: var(--color-text-muted);">
-          Advisors: {item.advisors.join(', ')}
+          {item.advisors.length === 1 ? 'Advisor' : 'Advisors'}: {item.advisors.join(', ')}
         </p>
       )}
       <p class="text-xs mb-3" style="color: var(--color-text-subtle);">

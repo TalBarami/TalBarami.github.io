@@ -3,7 +3,7 @@
   logo: "/assets/images/bgu.png"
   startYear: 2026
   endYear: null
-  advisor:
+  advisors:
     - "Prof. Ilan Dinstein"
   tags:
     - Behavior Analysis
