@@ -1,0 +1,137 @@
+---
+import '../styles/global.css';
+
+import profile from '../data/profile.yaml';
+import education from '../content/education.yaml';
+import experience from '../content/experience.yaml';
+import publications from '../content/publications.yaml';
+import teaching from '../content/teaching.yaml';
+
+const ownerName = profile.name;
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — {ownerName}</title>
+</head>
+<body>
+
+<div class="no-print" style="text-align:right; padding: 1rem 2rem;">
+  <button onclick="window.print()" style="padding: 0.5rem 1.25rem; background: #2563eb; color: white; border: none; border-radius: 6px; font-size: 0.875rem; font-weight: 600; cursor: pointer;">
+    Print / Save as PDF
+  </button>
+</div>
+
+<main style="max-width: 800px; margin: 0 auto; padding: 2rem; font-family: 'Inter', system-ui, sans-serif; color: #0f172a; line-height: 1.6;">
+
+  <!-- Header -->
+  <header style="margin-bottom: 1.5rem; border-bottom: 2px solid #0f172a; padding-bottom: 1rem;">
+    <h1 style="font-size: 2rem; font-weight: 700; margin: 0 0 0.25rem;">{ownerName}</h1>
+    <p style="font-size: 1rem; color: #64748b; margin: 0 0 0.75rem;">{profile.title}</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem;">
+      {profile.socials.map(s => (
+        <a href={s.url} style="color: #2563eb;">{s.label}</a>
+      ))}
+    </div>
+  </header>
+
+  <!-- Education -->
+  <section style="margin-bottom: 1.5rem;">
+    <h2 style="font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem; margin-bottom: 0.75rem;">Education</h2>
+    {education.map(item => (
+      <div style="margin-bottom: 0.75rem;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <strong style="font-size: 0.9rem;">{item.degree}</strong>
+          <span style="font-size: 0.8rem; color: #64748b;">{item.startYear} – {item.endYear ?? 'Present'}</span>
+        </div>
+        <div style="font-size: 0.85rem; color: #64748b;">{item.institution}</div>
+        {item.advisors && item.advisors.length > 0 && (
+          <div style="font-size: 0.82rem; color: #94a3b8;">
+            {item.advisors.length === 1 ? 'Advisor' : 'Advisors'}: {item.advisors.join(', ')}
+          </div>
+        )}
+      </div>
+    ))}
+  </section>
+
+  <!-- Experience -->
+  <section style="margin-bottom: 1.5rem;">
+    <h2 style="font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem; margin-bottom: 0.75rem;">Professional Experience</h2>
+    {experience.map(item => (
+      <div style="margin-bottom: 1rem;">
+        <strong style="font-size: 0.9rem;">{item.company}</strong>
+        {item.roles.map(role => (
+          <div style="margin-top: 0.35rem; padding-left: 0.75rem; border-left: 2px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span style="font-size: 0.85rem; font-weight: 600;">{role.title}</span>
+              <span style="font-size: 0.8rem; color: #64748b;">{role.startYear} – {role.endYear}</span>
+            </div>
+            <p style="font-size: 0.82rem; color: #64748b; margin: 0.2rem 0 0;">{role.description}</p>
+          </div>
+        ))}
+      </div>
+    ))}
+  </section>
+
+  <!-- Publications & Projects -->
+  <section style="margin-bottom: 1.5rem;">
+    <h2 style="font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem; margin-bottom: 0.75rem;">Publications & Projects</h2>
+    {publications.map(item => (
+      <div style="margin-bottom: 0.9rem;">
+        <div style="font-size: 0.88rem; font-weight: 600; margin-bottom: 0.15rem;">
+          {item.links && item.links.length > 0
+            ? <a href={item.links[0].url} style="color: #0f172a;">{item.title}</a>
+            : item.title
+          }
+        </div>
+        <div style="font-size: 0.8rem; color: #64748b; margin-bottom: 0.1rem;">
+          {item.authors.map((author: string, i: number) => (
+            <>
+              {author === ownerName
+                ? <strong style="color: #0f172a;">{author}</strong>
+                : author
+              }{i < item.authors.length - 1 ? ', ' : ''}
+            </>
+          ))}
+        </div>
+        {(item.venue || item.year) && (
+          <div style="font-size: 0.8rem; color: #2563eb; font-style: italic;">
+            {[item.venue, item.year].filter(Boolean).join(' · ')}
+          </div>
+        )}
+      </div>
+    ))}
+  </section>
+
+  <!-- Teaching -->
+  <section style="margin-bottom: 1.5rem;">
+    <h2 style="font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem; margin-bottom: 0.75rem;">Teaching</h2>
+    {teaching.map(item => (
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
+        <div>
+          <span style="font-size: 0.87rem; font-weight: 500;">{item.title}</span>
+          <span style="font-size: 0.8rem; color: #94a3b8; margin-left: 0.5rem;">· {item.role}</span>
+        </div>
+        <span style="font-size: 0.8rem; color: #64748b; white-space: nowrap; margin-left: 1rem;">{item.years}</span>
+      </div>
+    ))}
+  </section>
+
+</main>
+</body>
+</html>
+
+<style>
+  @media print {
+    .no-print { display: none !important; }
+    body { margin: 0; }
+    main { padding: 0; max-width: 100%; }
+    a { color: #000 !important; text-decoration: none; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 7pt; color: #555; }
+    a[href^="mailto"]::after { content: none; }
+    section { break-inside: avoid; }
+  }
+</style>

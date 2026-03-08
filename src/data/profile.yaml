@@ -1,7 +1,7 @@
 name: "Tal Barami"
 title: "Ph.D. Researcher in Computer Science"
 photo: "/assets/images/pic.jpg"
-cv: "/assets/documents/CV - Tal Barami.pdf"
+cv: "/cv"
 bio: >
   Ph.D. student in the department of
   <a href="https://in.bgu.ac.il/en/natural_science/cs/Pages/default.aspx" class="underline hover:text-blue-300 transition-colors">computer science</a>

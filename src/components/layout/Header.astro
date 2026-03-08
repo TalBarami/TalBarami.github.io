@@ -13,9 +13,9 @@ interface Props {
 const { name, cv, socials } = Astro.props;
 
 const navLinks = [
-  { label: 'Education', href: '#education' },
   { label: 'Publications', href: '#publications' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Education', href: '#education' },
   { label: 'Teaching', href: '#teaching' },
 ];
 ---
@@ -43,10 +43,10 @@ const navLinks = [
           <img src={s.icon} alt={s.label} class="w-5 h-5" />
         </a>
       ))}
-      <a href={cv} download
+      <a href={cv}
         class="cv-download-btn ml-2 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors"
         style="background: var(--color-accent); color: white;">
-        Download CV
+        View CV
       </a>
     </div>
   </div>
