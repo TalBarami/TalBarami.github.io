@@ -1,8 +1,21 @@
+- degree: "Computer Science & Psychology, Postdoc"
+  institution: "Ben-Gurion University of the Negev"
+  logo: "/assets/images/bgu.png"
+  startYear: 2026
+  endYear: null
+  advisor:
+    - "Prof. Ilan Dinstein"
+  tags:
+    - Behavior Analysis
+    - Autism Research
+    - Computer Vision
+    - Deep Learning
+
 - degree: "Computer Science, Ph.D."
   institution: "Ben-Gurion University of the Negev"
   logo: "/assets/images/bgu.png"
-  startYear: 2020
-  endYear: null
+  startYear: 2021
+  endYear: 2026
   advisors:
     - "Prof. Ilan Dinstein"
     - "Dr. Omri Azencot"
@@ -22,7 +35,7 @@
   institution: "Ben-Gurion University of the Negev"
   logo: "/assets/images/bgu.png"
   startYear: 2018
-  endYear: 2020
+  endYear: 2021
   advisors:
     - "Prof. Ilan Dinstein"
     - "Prof. Andrei Sharf"
