@@ -5,15 +5,17 @@
       startYear: 2021
       endYear: 2022
       description: >
-        Playtika Research Group: Pursued the field of feature disentanglement in generative
-        methods for 3D modeling. Developed a segmentation-based method for 3D pose estimation.
+        Conducted research within the Playtika Research Group on feature disentanglement in
+        generative models for 3D content creation. Designed and implemented a segmentation-based
+        method for human pose estimation from 3D data.
     - title: "Data Scientist"
       startYear: 2019
       endYear: 2021
       description: >
-        Developed models for uplift modeling and churn predictions, as well as internal tools
-        for the automation of research phases such as data acquisition, modeling, analysis,
-        and evaluation.
+        Developed and deployed machine learning models for uplift modeling and churn prediction
+        at scale. Built internal automation tooling to streamline key research phases including
+        data acquisition, feature engineering, model training, evaluation, and reporting,
+        significantly reducing iteration time.
   tags:
     - Python
     - Research
@@ -31,8 +33,9 @@
       startYear: 2016
       endYear: 2018
       description: >
-        Development and maintenance of features for some of the company's top products.
-        Both handle production-line management for large-scale factories around the globe.
+        Developed and maintained features for flagship enterprise products managing
+        production-line operations across large-scale manufacturing facilities worldwide.
+        Worked across full-stack components in a cross-functional R&D team.
   tags:
     - Java
     - Spring

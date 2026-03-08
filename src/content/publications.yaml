@@ -1,3 +1,36 @@
+- title: "Identifying ASD According to Children's Body Movements"
+  authors:
+    - "Tal Barami"
+    - "Liora Manelis-Baram"
+    - "Shalom Elkayam"
+    - "Omri Azencot"
+    - "Ilan Dinstein"
+  abstract: >
+    Autistic children exhibit distinct motor patterns that may enable objective, scalable
+    identification through automated analysis of body movements. We present a deep learning
+    pipeline trained on 580 hours of multi-camera ADOS-2 recordings from 300 children
+    (210 ASD, 90 typically developing). We fine-tuned the PoseC3D action recognition model
+    to classify skeletal movements in 10-second segments and aggregated evidence across
+    segments and cameras to classify individual children. The classifier achieved a mean
+    assessment-level accuracy of 89.0% ± 1.9% with an AUC of 0.94 ± 0.01 and balanced
+    sensitivity and specificity. Integrating data across cameras yielded a 9.4 percentage-point
+    improvement over single-camera classification, demonstrating the value of multiple
+    viewpoints. Temporal and spatial reorganization of skeletal positions decreased accuracy,
+    confirming reliance on coherent spatio-temporal movement patterns. These results demonstrate
+    that computer vision analysis of body movements can reliably identify many autistic children.
+  venue: null
+  year: null
+  links: []
+  tags:
+    - Autism
+    - Body Movements
+    - Action Recognition
+    - PoseC3D
+    - ADOS-2
+    - Computer Vision
+    - Behavior Analysis
+    - Classification
+
 - title: "Disentanglement Beyond Static vs. Dynamic: A Benchmark and Evaluation Framework for Multi-Factor Sequential Representations"
   authors:
     - "Tal Barami"
@@ -23,8 +56,8 @@
     Together, these contributions provide a robust and scalable foundation for advancing
     multi-factor sequential disentanglement. Our code is available on GitHub, and the datasets
     and trained models are available on Hugging Face.
-  venue: "arXiv"
-  year: 2024
+  venue: "NeurIPS 2025"
+  year: 2025
   links:
     - label: "Paper (arXiv)"
       url: "https://arxiv.org/abs/2510.17313"

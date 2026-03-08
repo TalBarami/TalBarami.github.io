@@ -1,14 +1,49 @@
+- title: "Principles of Object-Oriented Programming"
+  syllabus: "/assets/documents/poop222syllabus.pdf"
+  institution: "Ben-Gurion University of the Negev"
+  role: "Lecturer"
+  years: "2019–present"
+  description: >
+    Covers the fundamental principles of object-oriented design including encapsulation,
+    inheritance, polymorphism, and abstraction. Students develop proficiency in Java through
+    hands-on projects emphasizing software design patterns and clean code practices.
+
 - title: "Introduction to Formal Verification Methods"
   syllabus: "/assets/documents/fvm221syllabus.pdf"
   institution: "Ben-Gurion University of the Negev"
   role: "Teaching Assistant"
+  years: "2019–present"
+  description: >
+    Introduces mathematical techniques for verifying the correctness of software and hardware
+    systems. Topics include temporal logic, model checking, and automated theorem proving,
+    with applications to safety-critical and concurrent systems.
 
-- title: "Principles of Object-Oriented Programming"
-  syllabus: "/assets/documents/poop222syllabus.pdf"
+- title: "Foundations of Software Engineering"
+  syllabus: null
   institution: "Ben-Gurion University of the Negev"
   role: "Teaching Assistant"
+  years: "2024–present"
+  description: >
+    Covers core software engineering methodologies with emphasis on design patterns,
+    refactoring, and building maintainable software. Topics include requirements analysis,
+    system design, testing strategies, and agile development practices.
+
+- title: "Introduction to Computer Science"
+  syllabus: null
+  institution: "Ben-Gurion University of the Negev"
+  role: "Teaching Assistant"
+  years: "2024–present"
+  description: >
+    A first course in computer science covering fundamental concepts such as algorithms,
+    data structures, computational thinking, and introductory programming. Designed to build
+    a solid foundation for further study in computer science and engineering.
 
 - title: "Compiler Principles"
   syllabus: "/assets/documents/comp191syllabus.pdf"
   institution: "Ben-Gurion University of the Negev"
   role: "Teaching Assistant"
+  years: "2019"
+  description: >
+    Explores the theory and practice of compiler construction, covering lexical analysis,
+    parsing, semantic analysis, intermediate code generation, and optimization. Students
+    implement a working compiler for a subset language throughout the course.
