@@ -1,0 +1,53 @@
+---
+interface Social {
+  label: string;
+  url: string;
+  icon: string;
+  rel?: string;
+}
+interface Props {
+  name: string;
+  cv: string;
+  socials: Social[];
+}
+const { name, cv, socials } = Astro.props;
+
+const navLinks = [
+  { label: 'Education', href: '#education' },
+  { label: 'Publications', href: '#publications' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Teaching', href: '#teaching' },
+];
+---
+
+<header class="sticky top-0 z-50 border-b backdrop-blur-sm"
+  style="background: rgba(255,255,255,0.9); border-color: var(--color-border);">
+  <div class="content-wrapper mx-auto px-6 flex items-center justify-between h-14"
+    style="max-width: var(--content-max-width);">
+    <a href="#" class="font-semibold text-sm" style="color: var(--color-text);">{name}</a>
+
+    <nav class="hidden md:flex items-center gap-6" aria-label="Page sections">
+      {navLinks.map(link => (
+        <a href={link.href}
+          class="text-sm transition-colors hover:underline"
+          style="color: var(--color-text-muted);">
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="flex items-center gap-3">
+      {socials.map(s => (
+        <a href={s.url} rel={s.rel} target="_blank" title={s.label}
+          class="opacity-60 hover:opacity-100 transition-opacity">
+          <img src={s.icon} alt={s.label} class="w-5 h-5" />
+        </a>
+      ))}
+      <a href={cv} download
+        class="cv-download-btn ml-2 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors"
+        style="background: var(--color-accent); color: white;">
+        Download CV
+      </a>
+    </div>
+  </div>
+</header>

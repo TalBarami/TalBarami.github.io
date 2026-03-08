@@ -1,0 +1,30 @@
+name: "Tal Barami"
+title: "Ph.D. Researcher in Computer Science"
+photo: "/assets/images/pic.jpg"
+cv: "/assets/documents/CV - Tal Barami.pdf"
+bio: >
+  Ph.D. student in the department of
+  <a href="https://in.bgu.ac.il/en/natural_science/cs/Pages/default.aspx" class="underline hover:text-blue-300 transition-colors">computer science</a>
+  at Ben Gurion University of the Negev.
+  Researcher, interested in solving graphics and vision problems with algorithms and data.
+interests:
+  - Coding
+  - Reading
+  - Traveling
+  - Sports
+  - Gaming
+socials:
+  - label: "GitHub"
+    url: "https://github.com/TalBarami"
+    icon: "/assets/logos/github.svg"
+    rel: "me"
+  - label: "LinkedIn"
+    url: "https://www.linkedin.com/in/tal-barami/"
+    icon: "/assets/logos/linkedin.svg"
+    rel: "me"
+  - label: "Mail"
+    url: "mailto:talbaramii@gmail.com"
+    icon: "/assets/logos/gmail.png"
+    rel: "me"
+analytics:
+  gaMeasurementId: "UA-119312378-1"

@@ -1,0 +1,22 @@
+---
+interface Props {
+  href: string;
+  label: string;
+  icon?: string;
+  rel?: string;
+  class?: string;
+}
+const { href, label, icon, rel, class: className } = Astro.props;
+const relValue = ['noopener', 'noreferrer', rel].filter(Boolean).join(' ');
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel={relValue}
+  class:list={["inline-flex items-center gap-1.5 text-sm font-medium transition-colors hover:underline", className]}
+  style="color: var(--color-accent);"
+>
+  {icon && <img src={icon} alt="" aria-hidden="true" class="w-4 h-4 inline-block" />}
+  {label}
+</a>

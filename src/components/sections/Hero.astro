@@ -1,0 +1,72 @@
+---
+import Tag from '../ui/Tag.astro';
+
+interface Social {
+  label: string;
+  url: string;
+  icon: string;
+  rel?: string;
+}
+
+interface Props {
+  profile: {
+    name: string;
+    title: string;
+    photo: string;
+    cv: string;
+    bio: string;
+    interests: string[];
+    socials: Social[];
+  };
+}
+
+const { profile } = Astro.props;
+---
+
+<section id="hero" class="py-16 md:py-24"
+  style="background: linear-gradient(135deg, var(--color-surface-alt) 0%, var(--color-surface) 100%);">
+  <div class="content-wrapper mx-auto px-6" style="max-width: var(--content-max-width);">
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-10">
+      <!-- Text content -->
+      <div class="flex-1">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-2"
+          style="color: var(--color-text);">
+          {profile.name}
+        </h1>
+        <p class="text-lg mb-4" style="color: var(--color-text-muted);">{profile.title}</p>
+
+        <p class="text-base mb-6 max-w-prose" style="color: var(--color-text); line-height: 1.75;"
+          set:html={profile.bio} />
+
+        <!-- Social links -->
+        <div class="flex flex-wrap items-center gap-4 mb-6">
+          {profile.socials.map(s => (
+            <a href={s.url} rel={s.rel} target={s.url.startsWith('mailto') ? undefined : '_blank'}
+              class="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:underline"
+              style="color: var(--color-text-muted);">
+              <img src={s.icon} alt="" aria-hidden="true" class="w-5 h-5" />
+              {s.label}
+            </a>
+          ))}
+        </div>
+
+        <!-- Interests -->
+        <div class="flex flex-wrap gap-2">
+          {profile.interests.map(i => <Tag label={i} />)}
+        </div>
+      </div>
+
+      <!-- Photo -->
+      <div class="shrink-0">
+        <img
+          src={profile.photo}
+          alt={profile.name}
+          width="180"
+          height="180"
+          class="rounded-2xl object-cover shadow-lg"
+          style="border: 3px solid var(--color-border);"
+        />
+      </div>
+    </div>
+  </div>
+</section>

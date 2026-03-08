@@ -1,0 +1,81 @@
+---
+import Section from '../layout/Section.astro';
+import Card from '../ui/Card.astro';
+import Tag from '../ui/Tag.astro';
+import ExternalLink from '../ui/ExternalLink.astro';
+
+interface PubLink {
+  label: string;
+  url: string;
+  icon?: string;
+}
+
+interface PublicationItem {
+  title: string;
+  authors: string[];
+  abstract: string;
+  venue: string | null;
+  year: number | null;
+  links: PubLink[];
+  tags: string[];
+}
+
+interface Props {
+  items: PublicationItem[];
+  ownerName: string;
+}
+
+const { items, ownerName } = Astro.props;
+---
+
+<Section id="publications" title="Publications & Projects">
+  {items.map(item => (
+    <Card>
+      <!-- Title -->
+      <h3 class="font-semibold text-base mb-1 leading-snug" style="color: var(--color-text);">
+        {item.links[0]
+          ? <a href={item.links[0].url} target="_blank" rel="noopener noreferrer"
+              class="hover:underline" style="color: var(--color-text);">{item.title}</a>
+          : item.title
+        }
+      </h3>
+
+      <!-- Venue & Year -->
+      {(item.venue || item.year) && (
+        <p class="text-xs mb-1.5 font-medium" style="color: var(--color-accent);">
+          {[item.venue, item.year].filter(Boolean).join(' · ')}
+        </p>
+      )}
+
+      <!-- Authors (owner name bolded) -->
+      <p class="text-sm mb-3" style="color: var(--color-text-muted);">
+        {item.authors.map((author, i) => (
+          <>
+            {author === ownerName
+              ? <strong style="color: var(--color-text);">{author}</strong>
+              : author
+            }
+            {i < item.authors.length - 1 ? ', ' : ''}
+          </>
+        ))}
+      </p>
+
+      <!-- Abstract -->
+      <p class="text-sm mb-3 leading-relaxed" style="color: var(--color-text-muted);">{item.abstract}</p>
+
+      <!-- Links -->
+      {item.links.length > 0 && (
+        <div class="flex flex-wrap gap-4 mb-3">
+          {item.links.map(link => (
+            <ExternalLink href={link.url} label={link.label} icon={link.icon} />
+          ))}
+        </div>
+      )}
+
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-1.5">
+        {item.tags.map(tag => <Tag label={tag} />)}
+      </div>
+    </Card>
+  ))}
+</Section>

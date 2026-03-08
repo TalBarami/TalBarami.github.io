@@ -1,0 +1,48 @@
+- degree: "Computer Science, Ph.D."
+  institution: "Ben-Gurion University of the Negev"
+  logo: "/assets/images/bgu.png"
+  startYear: 2020
+  endYear: null
+  advisors:
+    - "Prof. Ilan Dinstein"
+    - "Dr. Omri Azencot"
+  tags:
+    - Behavior Analysis
+    - Autism Research
+    - Medical Data
+    - Applicative Research
+    - Sequential Data
+    - Representation Learning
+    - Disentanglement
+    - Facial Expressions Analysis
+    - Treatment Effect Estimation
+    - Saliency Maps
+
+- degree: "Computer Science, M.Sc."
+  institution: "Ben-Gurion University of the Negev"
+  logo: "/assets/images/bgu.png"
+  startYear: 2018
+  endYear: 2020
+  advisors:
+    - "Prof. Ilan Dinstein"
+    - "Prof. Andrei Sharf"
+  tags:
+    - Artificial Intelligence
+    - Deep Learning
+    - Computer Vision
+    - Video Processing
+    - Object Detection
+    - Video Games Design
+    - Action Recognition
+
+- degree: "Software Engineering, B.E."
+  institution: "Ben-Gurion University of the Negev"
+  logo: "/assets/images/bgu.png"
+  startYear: 2014
+  endYear: 2018
+  advisors: []
+  tags:
+    - Computer Graphics
+    - Software Design
+    - Virtual Reality
+    - Data Science

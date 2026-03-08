@@ -1,0 +1,17 @@
+---
+interface Props {
+  id: string;
+  title: string;
+}
+const { id, title } = Astro.props;
+---
+
+<section {id} class="scroll-mt-20">
+  <h2 class="text-xl font-semibold mb-6 pb-3 border-b"
+    style="color: var(--color-text); border-color: var(--color-border);">
+    {title}
+  </h2>
+  <div class="flex flex-col gap-4">
+    <slot />
+  </div>
+</section>

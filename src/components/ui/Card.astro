@@ -1,0 +1,28 @@
+---
+interface Props {
+  logo?: string;
+  logoAlt?: string;
+}
+const { logo, logoAlt = '' } = Astro.props;
+---
+
+<article class="card flex gap-5 p-5 rounded-xl border transition-shadow"
+  style="background: var(--color-surface-card); border-color: var(--color-border); box-shadow: var(--shadow-card);">
+  {logo && (
+    <div class="shrink-0 w-12 h-12 flex items-center justify-center rounded-lg overflow-hidden"
+      style="background: var(--color-surface-alt); border: 1px solid var(--color-border-subtle);">
+      <img src={logo} alt={logoAlt} class="w-10 h-10 object-contain" />
+    </div>
+  )}
+  {!logo && (
+    <div class="shrink-0 w-12 h-12 flex items-center justify-center rounded-lg"
+      style="background: var(--color-surface-alt); border: 1px solid var(--color-border-subtle); color: var(--color-text-subtle);">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M13,3v6h6L13,3z M13,11c-1.1,0-2-0.9-2-2V2H5C4.5,2,4,2.5,4,3v18c0,0.5,0.5,1,1,1h14c0.5,0,1-0.5,1-1V11H13z"/>
+      </svg>
+    </div>
+  )}
+  <div class="flex-1 min-w-0">
+    <slot />
+  </div>
+</article>

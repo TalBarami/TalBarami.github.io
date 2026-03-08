@@ -1,0 +1,44 @@
+---
+import Section from '../layout/Section.astro';
+
+interface TeachingItem {
+  title: string;
+  syllabus: string;
+  institution: string;
+  role: string;
+}
+
+interface Props {
+  items: TeachingItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<Section id="teaching" title="Teaching">
+  <div class="flex flex-col divide-y rounded-xl border overflow-hidden"
+    style="border-color: var(--color-border);">
+    {items.map(item => (
+      <div class="flex items-center gap-4 px-5 py-4" style="background: var(--color-surface-card);">
+        <div class="shrink-0 w-8 h-8 flex items-center justify-center rounded-lg"
+          style="background: var(--color-surface-alt); border: 1px solid var(--color-border-subtle); color: var(--color-text-subtle);">
+          <img src="/assets/logos/teaching.svg" alt="" aria-hidden="true" class="w-5 h-5" />
+        </div>
+        <div class="flex-1">
+          <a href={item.syllabus} target="_blank" rel="noopener noreferrer"
+            class="font-medium text-sm hover:underline" style="color: var(--color-text);">
+            {item.title}
+          </a>
+          <p class="text-xs mt-0.5" style="color: var(--color-text-subtle);">
+            {item.role} &middot; {item.institution}
+          </p>
+        </div>
+        <a href={item.syllabus} target="_blank" rel="noopener noreferrer"
+          class="shrink-0 text-xs px-2.5 py-1 rounded-md transition-colors"
+          style="background: var(--color-surface-alt); color: var(--color-text-muted); border: 1px solid var(--color-border);">
+          Syllabus
+        </a>
+      </div>
+    ))}
+  </div>
+</Section>

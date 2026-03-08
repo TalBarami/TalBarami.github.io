@@ -1,0 +1,49 @@
+---
+import Section from '../layout/Section.astro';
+import Card from '../ui/Card.astro';
+import Tag from '../ui/Tag.astro';
+
+interface Role {
+  title: string;
+  startYear: number;
+  endYear: number;
+  description: string;
+}
+
+interface ExperienceItem {
+  company: string;
+  logo: string;
+  roles: Role[];
+  tags: string[];
+}
+
+interface Props {
+  items: ExperienceItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<Section id="experience" title="Professional Experience">
+  {items.map(item => (
+    <Card logo={item.logo} logoAlt={item.company}>
+      <h3 class="font-semibold text-base mb-3" style="color: var(--color-text);">{item.company}</h3>
+      <div class="flex flex-col gap-3 mb-3">
+        {item.roles.map(role => (
+          <div class="pl-3 border-l-2" style="border-color: var(--color-border);">
+            <div class="flex items-baseline gap-2 mb-0.5">
+              <span class="font-medium text-sm" style="color: var(--color-text);">{role.title}</span>
+              <span class="text-xs" style="color: var(--color-text-subtle);">
+                {role.startYear} &mdash; {role.endYear}
+              </span>
+            </div>
+            <p class="text-sm" style="color: var(--color-text-muted);">{role.description}</p>
+          </div>
+        ))}
+      </div>
+      <div class="flex flex-wrap gap-1.5">
+        {item.tags.map(tag => <Tag label={tag} />)}
+      </div>
+    </Card>
+  ))}
+</Section>

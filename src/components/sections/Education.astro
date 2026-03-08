@@ -1,0 +1,41 @@
+---
+import Section from '../layout/Section.astro';
+import Card from '../ui/Card.astro';
+import Tag from '../ui/Tag.astro';
+
+interface EducationItem {
+  degree: string;
+  institution: string;
+  logo: string;
+  startYear: number;
+  endYear: number | null;
+  advisors: string[];
+  tags: string[];
+}
+
+interface Props {
+  items: EducationItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<Section id="education" title="Education">
+  {items.map(item => (
+    <Card logo={item.logo} logoAlt={item.institution}>
+      <h3 class="font-semibold text-base mb-0.5" style="color: var(--color-text);">{item.degree}</h3>
+      <p class="text-sm mb-0.5" style="color: var(--color-text-muted);">{item.institution}</p>
+      {item.advisors.length > 0 && (
+        <p class="text-sm mb-1" style="color: var(--color-text-muted);">
+          Advisors: {item.advisors.join(', ')}
+        </p>
+      )}
+      <p class="text-xs mb-3" style="color: var(--color-text-subtle);">
+        {item.startYear} &mdash; {item.endYear ?? 'Present'}
+      </p>
+      <div class="flex flex-wrap gap-1.5">
+        {item.tags.map(tag => <Tag label={tag} />)}
+      </div>
+    </Card>
+  ))}
+</Section>

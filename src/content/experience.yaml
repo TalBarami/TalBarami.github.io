@@ -1,0 +1,41 @@
+- company: "Playtika"
+  logo: "/assets/logos/playtika.svg"
+  roles:
+    - title: "Researcher"
+      startYear: 2021
+      endYear: 2022
+      description: >
+        Playtika Research Group: Pursued the field of feature disentanglement in generative
+        methods for 3D modeling. Developed a segmentation-based method for 3D pose estimation.
+    - title: "Data Scientist"
+      startYear: 2019
+      endYear: 2021
+      description: >
+        Developed models for uplift modeling and churn predictions, as well as internal tools
+        for the automation of research phases such as data acquisition, modeling, analysis,
+        and evaluation.
+  tags:
+    - Python
+    - Research
+    - Data Science
+    - 3D Modeling
+    - GANs
+    - Pose Estimation
+    - Uplift Modeling
+    - Churn Prediction
+
+- company: "Mentor Graphics"
+  logo: "/assets/logos/mentor_graphics.svg"
+  roles:
+    - title: "Software Engineer"
+      startYear: 2016
+      endYear: 2018
+      description: >
+        Development and maintenance of features for some of the company's top products.
+        Both handle production-line management for large-scale factories around the globe.
+  tags:
+    - Java
+    - Spring
+    - "C#"
+    - .NET
+    - R&D

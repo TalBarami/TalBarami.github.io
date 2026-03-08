@@ -1,0 +1,72 @@
+@media print {
+  /* Hide navigation and non-essential chrome */
+  header nav,
+  header .cv-download-btn,
+  footer {
+    display: none !important;
+  }
+
+  /* Remove hero background / decorative elements */
+  #hero {
+    background: none !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  /* Flatten layout */
+  body {
+    font-size: 10pt;
+    color: #000;
+    background: #fff;
+  }
+
+  /* Expand content to full page width */
+  .content-wrapper {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Cards: remove shadow, show border */
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    break-inside: avoid;
+  }
+
+  /* Tags: no background — just show text */
+  .tag {
+    background: none !important;
+    border: 1px solid #999 !important;
+    color: #333 !important;
+  }
+
+  /* Ensure links are readable */
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  /* Section headers */
+  section h2 {
+    border-bottom: 1px solid #000;
+    padding-bottom: 4pt;
+    margin-bottom: 8pt;
+  }
+
+  /* Avoid page breaks inside articles */
+  article {
+    break-inside: avoid;
+  }
+
+  /* Show href for links in print */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #555;
+  }
+
+  a[href^="mailto"]::after,
+  a[href^="/"]::after {
+    content: none;
+  }
+}

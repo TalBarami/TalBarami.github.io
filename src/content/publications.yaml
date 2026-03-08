@@ -1,0 +1,164 @@
+- title: "Disentanglement Beyond Static vs. Dynamic: A Benchmark and Evaluation Framework for Multi-Factor Sequential Representations"
+  authors:
+    - "Tal Barami"
+    - "Nimrod Berman"
+    - "Ilan Naiman"
+    - "Amos Haviv Hason"
+    - "Rotem Ezra"
+    - "Omri Azencot"
+  abstract: >
+    Learning disentangled representations in sequential data is a key goal in deep learning,
+    with broad applications in vision, audio, and time series. While real-world data involves
+    multiple interacting semantic factors over time, prior work has mostly focused on simpler
+    two-factor static and dynamic settings, primarily because such settings make data collection
+    easier, thereby overlooking the inherently multi-factor nature of real-world data. We
+    introduce the first standardized benchmark for evaluating multi-factor sequential
+    disentanglement across six diverse datasets spanning video, audio, and time series. Our
+    benchmark includes modular tools for dataset integration, model development, and evaluation
+    metrics tailored to multi-factor analysis. We additionally propose a post-hoc Latent
+    Exploration Stage to automatically align latent dimensions with semantic factors, and
+    introduce a Koopman-inspired model that achieves state-of-the-art results. Moreover, we
+    show that Vision-Language Models can automate dataset annotation and serve as zero-shot
+    disentanglement evaluators, removing the need for manual labels and human intervention.
+    Together, these contributions provide a robust and scalable foundation for advancing
+    multi-factor sequential disentanglement. Our code is available on GitHub, and the datasets
+    and trained models are available on Hugging Face.
+  venue: "arXiv"
+  year: 2024
+  links:
+    - label: "Paper (arXiv)"
+      url: "https://arxiv.org/abs/2510.17313"
+    - label: "Code & Benchmark"
+      url: "https://github.com/azencot-group/MSD-Benchmark"
+      icon: "/assets/logos/github.svg"
+  tags:
+    - Disentanglement
+    - Sequential Data
+    - Video
+    - Audio
+    - Time Series
+    - Latent Space Exploration
+    - Koopman Models
+    - VLM Evaluation
+    - Benchmarking
+
+- title: "Comparing three algorithms of automated facial expression analysis in autistic children: different sensitivities but consistent proportion"
+  authors:
+    - "Liora Manelis"
+    - "Tal Barami"
+    - "Michal Ilan"
+    - "Gal Meiri"
+    - "Idan Menashe"
+    - "Elizabeth Soskin"
+    - "Carmel Sofer"
+    - "Ilan Dinstein"
+  abstract: >
+    We analyzed over 5 million video frames from 100 children (72 autistic, 28 controls; ages 2–7)
+    recorded during ADOS-2 assessments. Facial expressions were quantified using three leading
+    analysis tools (iMotions, FaceReader, Py-Feat), enabling objective comparisons across
+    algorithms and groups. Despite substantial variability between tools, all three consistently
+    showed no group differences in the quantity of facial expressions, suggesting that atypical
+    expression use in autism relates more to quality, timing, and social context than to overall
+    frequency.
+  venue: "bioRxiv"
+  year: 2025
+  links:
+    - label: "Paper"
+      url: "https://www.biorxiv.org/content/10.1101/2025.05.14.653948v1.abstract"
+  tags:
+    - Facial Expressions
+    - Autism
+    - Computer Vision
+    - Behavior Analysis
+    - Py-Feat
+    - iMotions
+    - FaceReader
+    - ADOS-2
+
+- title: "Automated Analysis of Stereotypical Movements in Videos of Children With Autism Spectrum Disorder"
+  authors:
+    - "Tal Barami"
+    - "Liora Manelis-Baram"
+    - "Hadas Kaiser"
+    - "Michal Ilan"
+    - "Aviv Slobodkin"
+    - "Ofri Hadashi"
+    - "Dor Hadad"
+    - "Omri Azencot"
+    - "Andrei Sharf"
+    - "Ilan Dinstein"
+  abstract: >
+    We developed ASDMotion, the first large-scale open-source tool for detecting and quantifying
+    stereotypical motor movements (SMMs) in children with autism. Trained on over 200 clinical
+    assessments with expert annotations, ASDMotion combines deep learning with pose-based
+    analysis to identify repetitive behaviors such as hand flapping and body rocking. The system
+    achieves over 92% recall and strong alignment with expert ratings, enabling scalable and
+    objective measurement of a core symptom of autism. Beyond its immediate clinical utility,
+    ASDMotion provides a rich dataset and benchmark for advancing automated behavior analysis
+    in naturalistic settings, opening the door to more reliable diagnostics, treatment
+    monitoring, and research on developmental disorders.
+  venue: "JAMA Network Open"
+  year: 2024
+  links:
+    - label: "Paper"
+      url: "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2823635"
+    - label: "Code"
+      url: "https://github.com/Dinstein-Lab/ASDMotion"
+      icon: "/assets/logos/github.svg"
+  tags:
+    - Autism
+    - Stereotypical Movements
+    - Computer Vision
+    - Behavior Analysis
+    - Pose Estimation
+    - Deep Learning
+
+- title: "Neural Approaches for 3D Pose Estimation from 3D Data"
+  authors:
+    - "Gali Hod"
+    - "Tal Barami"
+    - "Michael Kolomenkin"
+  abstract: >
+    We present two novel, open-source methods for human pose estimation directly from 3D point
+    clouds and meshes, enabling accurate reconstruction of body joints for use in creative,
+    clinical, and interactive applications. Unlike classical approaches, our methods are fully
+    differentiable and designed to integrate seamlessly into modern deep learning pipelines.
+    One approach uses body-part segmentation for skeleton construction; the other directly
+    estimates joint positions using a PointNet++-based neural network.
+  venue: "3DBODY.TECH"
+  year: 2023
+  links:
+    - label: "Paper"
+      url: "https://proc.3dbody.tech/abstracts/2023/2342hod.html"
+  tags:
+    - 3D Pose Estimation
+    - Point Clouds
+    - Deep Learning
+    - PointNet++
+
+- title: "Sensperience: A Virtual Reality Journey Through Altered Perception"
+  authors:
+    - "Tal Barami"
+    - "Liza Fridman"
+    - "Carmel Lederer"
+    - "Boaz Krysler"
+  abstract: >
+    Sensperience is an immersive virtual reality application designed to let users explore and
+    experience a wide range of altered sensory realities. The system combines a VR headset with
+    a Geomagic haptic device, creating a fully interactive, multi-sensory environment that can
+    be entirely controlled and customized by the developer. Users are guided through a series
+    of simulated scenes, each engineered to manipulate and challenge specific human senses —
+    including complete darkness, underwater immersion, vertigo, zero gravity, and interaction
+    with varied textures. The result is a holistic simulation platform providing both visual
+    and tactile feedback, with applications in education, therapy, training, and entertainment.
+  venue: null
+  year: null
+  links:
+    - label: "Code"
+      url: "https://github.com/TalBarami/Senseperience"
+      icon: "/assets/logos/github.svg"
+  tags:
+    - Virtual Reality
+    - Haptics
+    - Multi-Sensory
+    - Unity

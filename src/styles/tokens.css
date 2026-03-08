@@ -1,0 +1,41 @@
+:root {
+  /* Colors */
+  --color-text:          #0f172a;
+  --color-text-muted:    #64748b;
+  --color-text-subtle:   #94a3b8;
+  --color-accent:        #2563eb;
+  --color-accent-hover:  #1d4ed8;
+  --color-accent-light:  #dbeafe;
+  --color-accent-text:   #1e40af;
+  --color-surface:       #ffffff;
+  --color-surface-alt:   #f8fafc;
+  --color-surface-card:  #ffffff;
+  --color-border:        #e2e8f0;
+  --color-border-subtle: #f1f5f9;
+
+  /* Tag colors */
+  --color-tag-bg:        #eff6ff;
+  --color-tag-text:      #1d4ed8;
+  --color-tag-border:    #bfdbfe;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Spacing */
+  --content-max-width: 1100px;
+  --section-gap: 5rem;
+
+  /* Shadows */
+  --shadow-sm:   0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.08);
+  --shadow-card-hover: 0 4px 12px 0 rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06);
+
+  /* Radius */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+
+  /* Transitions */
+  --transition: 150ms ease;
+}
