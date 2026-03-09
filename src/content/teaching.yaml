@@ -1,5 +1,5 @@
 - title: "Principles of Object-Oriented Programming"
-  syllabus: "/assets/documents/poop222syllabus.pdf"
+  syllabus: "/assets/documents/teaching/poop.pdf"
   institution: "Ben-Gurion University of the Negev"
   role: "Lecturer"
   years: "2019–present"
@@ -9,7 +9,7 @@
     hands-on projects emphasizing software design patterns and clean code practices.
 
 - title: "Introduction to Formal Verification Methods"
-  syllabus: "/assets/documents/fvm221syllabus.pdf"
+  syllabus: "/assets/documents/teaching/fvm.pdf"
   institution: "Ben-Gurion University of the Negev"
   role: "Teaching Assistant"
   years: "2019–present"
@@ -19,7 +19,7 @@
     with applications to safety-critical and concurrent systems.
 
 - title: "Foundations of Software Engineering"
-  syllabus: null
+  syllabus: "/assets/documents/teaching/fse.pdf"
   institution: "Ben-Gurion University of the Negev"
   role: "Teaching Assistant"
   years: "2024–present"
@@ -29,7 +29,7 @@
     system design, testing strategies, and agile development practices.
 
 - title: "Introduction to Computer Science"
-  syllabus: null
+  syllabus: "/assets/documents/teaching/ics.pdf"
   institution: "Ben-Gurion University of the Negev"
   role: "Teaching Assistant"
   years: "2024–present"
@@ -39,7 +39,7 @@
     a solid foundation for further study in computer science and engineering.
 
 - title: "Compiler Principles"
-  syllabus: "/assets/documents/comp191syllabus.pdf"
+  syllabus: "/assets/documents/teaching/cp.pdf"
   institution: "Ben-Gurion University of the Negev"
   role: "Teaching Assistant"
   years: "2019"

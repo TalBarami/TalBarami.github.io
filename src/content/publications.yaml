@@ -75,7 +75,7 @@
     - VLM Evaluation
     - Benchmarking
 
-- title: "Comparing three algorithms of automated facial expression analysis in autistic children: different sensitivities but consistent proportion"
+- title: "Comparing three algorithms of automated facial expression analysis in autistic children: different sensitivities but consistent proportions"
   authors:
     - "Liora Manelis"
     - "Tal Barami"
@@ -93,11 +93,11 @@
     showed no group differences in the quantity of facial expressions, suggesting that atypical
     expression use in autism relates more to quality, timing, and social context than to overall
     frequency.
-  venue: "bioRxiv"
+  venue: "Molecular Autism 16(1), 50"
   year: 2025
   links:
     - label: "Paper"
-      url: "https://www.biorxiv.org/content/10.1101/2025.05.14.653948v1.abstract"
+      url: "https://link.springer.com/article/10.1186/s13229-025-00685-x"
   tags:
     - Facial Expressions
     - Autism

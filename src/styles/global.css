@@ -24,8 +24,27 @@ body {
   font-family: var(--font-sans);
   color: var(--color-text);
   background-color: var(--color-surface);
+  background-image: url('/assets/images/background.png');
+  background-attachment: fixed;
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
   font-size: 16px;
   line-height: 1.6;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.65);
+  pointer-events: none;
+  z-index: 0;
+}
+
+main, header, footer {
+  position: relative;
+  z-index: 1;
 }
 
 /* Links */

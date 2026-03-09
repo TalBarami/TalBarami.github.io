@@ -17,7 +17,12 @@
   body {
     font-size: 10pt;
     color: #000;
-    background: #fff;
+    background: #fff !important;
+    background-image: none !important;
+  }
+
+  body::before {
+    display: none !important;
   }
 
   /* Expand content to full page width */
