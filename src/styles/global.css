@@ -42,9 +42,13 @@ body::before {
   z-index: 0;
 }
 
-main, header, footer {
+main, footer {
   position: relative;
   z-index: 1;
+}
+
+header {
+  z-index: 50;
 }
 
 /* Links */
