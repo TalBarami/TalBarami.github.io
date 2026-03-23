@@ -1,12 +1,12 @@
 name: "Tal Barami"
-title: "Ph.D. Researcher in Computer Science"
+title: "Postdoctoral Researcher · Behavior & Computer Vision"
 photo: "/assets/images/pic.jpg"
 cv: "/cv"
 bio: >
-  Ph.D. student in the department of
+  Postdoctoral researcher in
   <a href="https://in.bgu.ac.il/en/natural_science/cs/Pages/default.aspx" class="underline hover:text-blue-300 transition-colors">computer science</a>
   at Ben Gurion University of the Negev.
-  Researcher, interested in solving graphics and vision problems with algorithms and data.
+  I work at the intersection of behavior research and computer vision — applying real-world data to real problems in autism and human behavior analysis.
 interests:
   - Traveling
   - Nature
