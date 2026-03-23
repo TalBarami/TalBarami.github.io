@@ -24,7 +24,7 @@ body {
   font-family: var(--font-sans);
   color: var(--color-text);
   background-color: var(--color-surface);
-  background-image: url('/assets/images/background.png');
+  background-image: url('/assets/images/background_43.png');
   background-attachment: fixed;
   background-size: 100% auto;
   background-position: top center;

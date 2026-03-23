@@ -1,3 +1,7 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 # TalBarami.github.io
 
 Personal portfolio and academic CV for Tal Barami.
@@ -116,7 +120,13 @@ The GA Measurement ID lives in `src/data/profile.yaml` under `analytics.gaMeasur
 
 ---
 
+## Pages
+
+There are two routes:
+
+- `/` (`src/pages/index.astro`) — web portfolio; uses `BaseLayout`, Tailwind, and section components.
+- `/cv` (`src/pages/cv.astro`) — print-optimized CV; self-contained with inline styles, no BaseLayout or Tailwind classes. Print rules are embedded directly in the file (not in `print.css`).
+
 ## Print / CV Export
 
-`src/styles/print.css` contains all `@media print` rules. To export a PDF CV, open the
-live site in a browser and use File → Print → Save as PDF.
+`src/styles/print.css` contains `@media print` rules for the main portfolio page. The `/cv` page has its own `<style>` block with print rules and a "Print / Save as PDF" button. To export a clean CV PDF, navigate to `/cv` and print from there.
