@@ -6,6 +6,7 @@ import education from '../content/education.yaml';
 import experience from '../content/experience.yaml';
 import publications from '../content/publications.yaml';
 import teaching from '../content/teaching.yaml';
+import awards from '../content/awards.yaml';
 
 const ownerName = profile.name;
 ---
@@ -102,6 +103,21 @@ const ownerName = profile.name;
             {[item.venue, item.year].filter(Boolean).join(' · ')}
           </div>
         )}
+      </div>
+    ))}
+  </section>
+
+  <!-- Awards -->
+  <section style="margin-bottom: 1.5rem;">
+    <h2 style="font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem; margin-bottom: 0.75rem;">Scholarships, Fellowships & Research Funding</h2>
+    {awards.map(group => (
+      <div style="margin-bottom: 0.75rem;">
+        <div style="font-size: 0.82rem; font-weight: 700; color: #475569; margin-bottom: 0.3rem;">{group.category}</div>
+        <ul style="margin: 0; padding-left: 1.25rem;">
+          {group.items.map((item: string) => (
+            <li style="font-size: 0.85rem; margin-bottom: 0.15rem;">{item}</li>
+          ))}
+        </ul>
       </div>
     ))}
   </section>
