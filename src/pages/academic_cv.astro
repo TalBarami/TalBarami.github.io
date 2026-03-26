@@ -3,7 +3,6 @@ import '../styles/global.css';
 
 import profile from '../data/profile.yaml';
 import education from '../content/education.yaml';
-import experience from '../content/experience.yaml';
 import publications from '../content/publications.yaml';
 import teaching from '../content/teaching.yaml';
 import awards from '../content/awards.yaml';
@@ -16,7 +15,7 @@ const ownerName = profile.name;
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV — {ownerName}</title>
+  <title>Academic CV — {ownerName}</title>
 </head>
 <body>
 
@@ -54,25 +53,6 @@ const ownerName = profile.name;
             {item.advisors.length === 1 ? 'Advisor' : 'Advisors'}: {item.advisors.join(', ')}
           </div>
         )}
-      </div>
-    ))}
-  </section>
-
-  <!-- Experience -->
-  <section style="margin-bottom: 1.5rem;">
-    <h2 style="font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem; margin-bottom: 0.75rem;">Professional Experience</h2>
-    {experience.map(item => (
-      <div style="margin-bottom: 1rem;">
-        <strong style="font-size: 0.9rem;">{item.company}</strong>
-        {item.roles.map(role => (
-          <div style="margin-top: 0.35rem; padding-left: 0.75rem; border-left: 2px solid #e2e8f0;">
-            <div style="display: flex; justify-content: space-between; align-items: baseline;">
-              <span style="font-size: 0.85rem; font-weight: 600;">{role.title}</span>
-              <span style="font-size: 0.8rem; color: #64748b;">{role.startYear} – {role.endYear}</span>
-            </div>
-            <p style="font-size: 0.82rem; color: #64748b; margin: 0.2rem 0 0;">{role.description}</p>
-          </div>
-        ))}
       </div>
     ))}
   </section>
